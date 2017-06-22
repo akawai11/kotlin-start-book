@@ -4,7 +4,7 @@ class Rational(n: Int, d: Int) {
     init {
         require(d != 0, {"denominator must not be null"})
     }
-    private val g = gcd(Math.abs(n), Math.abs(d))
+    private val g by lazy { gcd(Math.abs(n), Math.abs(d)) }
 
     // 呼び出された時に値が確定する
     val numerator: Int by lazy { n / g }
@@ -23,3 +23,5 @@ class Rational(n: Int, d: Int) {
             if (b == 0) a
             else gcd(b, a% b)
 }
+
+operator fun Int.plus(r: Rational): Rational = r + this
