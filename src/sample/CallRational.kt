@@ -20,6 +20,9 @@ fun main(args: Array<String>) {
     println("-----------------------")
     println(Rational(1, 4) + 1)
     println(Rational(1, 1) + 2)
+    println("-----------------------")
+    println(3 + Rational(2, 1))
+    println(1 + Rational(1, 2) + 2)
 
 }
 
