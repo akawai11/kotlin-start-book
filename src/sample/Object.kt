@@ -35,4 +35,20 @@ fun main(args: Array<String>) {
     println(intArr[0])
     val chars: CharArray = charArrayOf('a', 'b', 'c')
     println("${chars[0]}, ${chars[1]}")
+
+    // リスト
+    val intList: List<Int> = listOf<Int>(1, 2, 3)
+    println(intList)
+    println(intList.size)
+    println(intList[0])
+    val charList: MutableList<Char> = mutableListOf('a', 'b')
+    println(charList)
+    charList[0] = 'c'
+    println(charList)
+    charList += 'X'
+    println(charList)
+    charList -= 'X'
+    println(charList)
+    charList.removeAt(0)
+    println(charList)
 }
