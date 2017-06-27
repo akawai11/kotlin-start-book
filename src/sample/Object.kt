@@ -51,4 +51,12 @@ fun main(args: Array<String>) {
     println(charList)
     charList.removeAt(0)
     println(charList)
+
+    // セット
+    val intSet: Set<Int> = setOf(1, 2, 1, 3)
+    println(intSet)
+    val charSet: MutableSet<Char> = mutableSetOf('a', 'a', 'b')
+    println(charSet)
+    charSet -= 'a'
+    println(charSet)
 }
