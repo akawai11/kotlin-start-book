@@ -69,4 +69,13 @@ fun main(args: Array<String>) {
     println(numberMap["three"])
     numberMap += "three" to 3
     println(numberMap)
+
+    // レンジ
+    print("5 in 1..10 :")
+    println(5 in 1..10)
+    val range: IntRange = 12..15
+    print("5 in range")
+    println(5 in range)
+    print("5 !in range")
+    println(5 !in range)
 }
