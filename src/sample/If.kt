@@ -69,7 +69,5 @@ fun main(args: Array<String>) {
         score >= 70 -> 'C'
         score >= 60 -> 'D'
         else -> 'F'
-
-
     }
 }
