@@ -25,5 +25,26 @@ fun main(args: Array<String>) {
     for(i in 1..10 step 2) {
         println(i)
     }
-    
+
+    val names = listOf("foo", "bar", "baz")
+    var barIndex = -1
+    for(index in names.indices) {
+        if(names[index] == "bar") {
+            barIndex = index
+            break
+        }
+    }
+    println(barIndex)
+
+    loop@ for(x in 1..10) {
+        for(y in 1..10) {
+            if (y == 5) {
+                print("x:")
+                print(x)
+                print(", y:")
+                print(y)
+                break@loop
+            }
+        }
+    }
 }
