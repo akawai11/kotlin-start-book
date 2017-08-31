@@ -8,14 +8,14 @@ fun main(args: Array<String>) {
 }
 
 val square: (Int) -> Int = { i: Int ->
-    i * i
+    i * i   
 }
 
 // 型推論
 val square1 = { i: Int ->
-    i *     i
+    i * i
 }
 
-val square2: (Int) -> Int = { i ->
-    i * i
+val square2: (Int) -> Int = {
+    it * it
 }
