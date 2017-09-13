@@ -12,11 +12,17 @@ inline fun forEach(str: String, f: (Char) -> Unit) {
     }
 }
 
-/* 非ローカルリターン */
+/* ラベルへのリターン */
 fun containsDigit(str: String): Boolean {
-    forEach(str) {
-        if (it.isDigit())
-            return true
+    var result = false
+    forEach(str) here@ {
+        if (it.isDigit()) {
+            result = true
+            println("return@here")
+            return@here
+        }
+        println("ループ継続")
     }
-    return false
+    println("return")
+    return result
 }
