@@ -15,14 +15,11 @@ inline fun forEach(str: String, f: (Char) -> Unit) {
 /* ラベルへのリターン */
 fun containsDigit(str: String): Boolean {
     var result = false
-    forEach(str) here@ {
+    forEach(str) {
         if (it.isDigit()) {
             result = true
-            println("return@here")
-            return@here
+            return@forEach
         }
-        println("ループ継続")
     }
-    println("return")
     return result
 }
